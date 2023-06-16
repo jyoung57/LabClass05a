@@ -31,7 +31,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(c, d) { //eslint-disable-line
   let theProduct = c * d;
-  let productMessage = ' The product of ' + c + ' and ' + d + ' is ' + theProduct + '.';
+  let productMessage = 'The product of ' + c + ' and ' + d + ' is ' + theProduct + '.';
   return [theProduct, productMessage];
 }
 
@@ -52,12 +52,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sum3 = a + b + c;
   let product3 = a * b * c;
   let messageSum3 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum3 + '.';
-  let messageProduct3 = ' The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product3 + '.';
-  return[sum3, messageSum3, product3, messageProduct3];
+  let messageProduct3 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product3 + '.';
+  return [sum3, product3, messageSum3, messageProduct3];
 }
 
 // Here is the test for;
@@ -102,14 +103,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+let productArray = [2, 3, 4];
 
+function multiplyArray(multArr) { //eslint-disable-line
+  let product = multiply(multArr[0], multArr[1]);
+  let totalProduct = multiply(product[0], multArr[2]);
+  let message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${totalProduct[0]}. `;
+  return[product, totalProduct, message];
 }
 
-// Here is the test for multiplyArray(); uncomment it to run it
+// Here is the test for;
+multiplyArray(productArray);
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
